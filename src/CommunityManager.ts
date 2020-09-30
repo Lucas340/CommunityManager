@@ -1,6 +1,7 @@
 import winston, { Logger } from 'winston'
 import moment from 'moment'
 import { Client } from 'discord.js'
+import { init } from './api/server'
 
 import glob from 'glob'
 import path from 'path'
@@ -45,6 +46,10 @@ class CommunityManager extends Client {
       const Command = require(path.resolve(file))
       this.commands.push(new Command())
     })
+  }
+
+  async initWebSite() {
+    init(this)
   }
 }
 
