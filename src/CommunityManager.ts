@@ -13,7 +13,7 @@ class CommunityManager extends Client {
   
   constructor () {
     super({})
-    
+
     this.logger = winston.createLogger()
     this.commands = []
   }
@@ -40,7 +40,7 @@ class CommunityManager extends Client {
   }
 
   initComamnds() {
-    glob.sync('./src/commands/**/*.js').forEach(file => {
+    glob.sync('./src/commands/**/*.ts').forEach(file => {
       this.logger.debug(`Loading command ${file}`)
       const Command = require(path.resolve(file))
       this.commands.push(new Command())
