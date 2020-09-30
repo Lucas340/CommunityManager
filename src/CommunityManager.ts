@@ -1,5 +1,8 @@
 import winston, { Logger } from 'winston'
+import moment from 'moment'
 import { Client } from 'discord.js'
+
+moment.locale('pt-br')
 
 class CommunityManager extends Client {
   public logger: Logger;
@@ -23,7 +26,7 @@ class CommunityManager extends Client {
           winston.format.colorize(),
           winston.format.timestamp(),
           winston.format.printf(
-            info => `${info.timestamp} ${info.level}${info.label ? ` [${info.label || ''}]` : ''}: ${info.message}`
+            info => `[${moment(info.timestamp).format('DD/MM/YYYY hh:mm:ss')}] ${info.level}: ${info.message}`
           )
         ),
         level: process.env.LOGGING_LEVEL || 'silly'

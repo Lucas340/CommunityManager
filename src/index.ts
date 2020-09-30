@@ -5,5 +5,5 @@ const client = new CommunityManager();
 
 client.initWinston()
 client.login(String(process.env.TOKEN))
-
-client.logger.info('CommunityManager bot is running', { label: "CommunityManager" })
+  .then(() => client.logger.info('CommunityManager bot is running'))
+  .catch(() => client.logger.error('CommunityManager does not online, because an error occurred'))
