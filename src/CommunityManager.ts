@@ -13,7 +13,7 @@ class CommunityManager extends Client {
   
   constructor () {
     super({})
-
+    
     this.logger = winston.createLogger()
     this.commands = []
   }
