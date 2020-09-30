@@ -10,7 +10,9 @@
   "dependencies": {
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
+    "glob": "^7.1.6",
     "moment": "^2.29.0",
+    "mongoose": "^5.10.7",
     "winston": "^3.3.3"
   },
   "devDependencies": {
