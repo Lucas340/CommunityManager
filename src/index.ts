@@ -3,6 +3,7 @@ import CommunityManager from "./CommunityManager";
 
 const client = new CommunityManager();
 
+// INIT's
 client.initWinston()
 client.login(String(process.env.TOKEN))
   .then(() => client.logger.info('CommunityManager bot is running'))
