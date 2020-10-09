@@ -11,8 +11,8 @@ moment.locale('pt-br')
 class CommunityManager extends Client {
   public logger: Logger;
   public commands: any[]
-  
-  constructor () {
+
+  constructor() {
     super({})
 
     this.logger = winston.createLogger()
@@ -23,7 +23,7 @@ class CommunityManager extends Client {
     return super.login(token)
   }
 
-  async initWinston() { 
+  async initWinston() {
     if (process.env.NODE_ENV === 'production') {
       this.logger.add(new winston.transports.Console({ level: process.env.LOGGING_LEVEL || 'silly' }))
     } else {
@@ -50,6 +50,16 @@ class CommunityManager extends Client {
 
   async initWebSite() {
     init(this)
+  }
+
+  loadEvents() {
+    glob.sync('./src/events/*.ts').forEach(file => {
+      const event = new (require(`./events/${file}`))(this);
+
+      super.on(file.split(".")[0], (...args) => event.run(...args));
+    });
+
+    return this;
   }
 }
 

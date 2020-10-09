@@ -7,6 +7,7 @@ const client = new CommunityManager();
 client.initWinston()
 client.initComamnds()
 client.initWebSite()
+client.loadEvents()
 
 client.login(String(process.env.TOKEN))
   .then(() => client.logger.info('CommunityManager bot is running'))
