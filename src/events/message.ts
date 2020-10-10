@@ -9,8 +9,6 @@ module.exports = class {
         this.client = client;
     }
     async run(message: Message) {
-        if (message.channel.type == 'dm') return;
-        if (message.author.bot) return;
         if (!message.content.startsWith('cm!')) return
 
         const prefix = 'cm!'
@@ -29,16 +27,15 @@ module.exports = class {
         cmd.setMessage(message, args);
         const Embed = new Discord.MessageEmbed()
             .setFooter(message.author.username, message.author.displayAvatarURL())
+            .setColor('#f00000')
 
         if (cmd.cooldown.has(message.author.id)) {
-            return message.channel.send(Embed.setDescription('You are in cooldown time. Take a break.'))
+            const time = String(cmd.cooldown.get(message.author.id) - Date.now())[0]
+            return message.channel.send(Embed.setDescription(`You are in **cooldown time**. Take a break for about **${time} second${Number(time) > 1 ? 's' : ''}**.`))
         }
-
-        const verify = await cmd.verifyRequirementes()
-        if (verify) return
 
         cmd.run({ message, args, prefix });
 
-        if (cmd.conf.cooldown > 0) cmd.startCooldown(message.author.id);
+        if (cmd.cooldownTime > 0) cmd.startCooldown(message.author.id);
     }
 };

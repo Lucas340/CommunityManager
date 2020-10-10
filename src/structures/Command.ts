@@ -1,4 +1,4 @@
-import Discord, { Message, User } from "discord.js";
+import Discord, { Collection, Message, User } from "discord.js";
 import CommunityManager from '../CommunityManager';
 
 interface Requirements {
@@ -37,22 +37,23 @@ class Command {
         this.description = configs.description || ''
         this.hidden = configs.hidden || false
         this.category = configs.category || 'Others'
-        this.cooldownTime = configs.cooldownTime || 1000
+        this.cooldownTime = configs.cooldownTime || 5000
+        this.cooldown = new Collection()
 
         this.requirements = configs.requirements || {}
 
         this.client = client;
     }
 
-    startCooldown(user: User) {
-        this.cooldown.add(user);
+    startCooldown(user: string) {
+        this.cooldown.set(user, Date.now() + this.cooldownTime);
 
         setTimeout(() => {
             this.cooldown.delete(user);
         }, this.cooldownTime);
     }
 
-    setMessage(message: Message, args: []) {
+    setMessage(message: Message, args: string[]) {
         this.message = message;
         this.args = args;
     }
@@ -72,6 +73,10 @@ class Command {
 
     async verifyRequirementes() {
         // Later...
+    }
+
+    run ({ message, args, prefix }: { message: Message, args: string[], prefix: string }) {
+        message.channel.send('Hello, world! This is an empty command.')
     }
 }
 
