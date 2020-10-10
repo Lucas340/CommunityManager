@@ -1,8 +1,8 @@
 import Command from '../../structures/Command'
-import { Client } from 'discord.js'
+import CommunityManager from '../../CommunityManager'
 
-export default class Info extends Command {
-  constructor (client: Client) {
+module.exports = class Info extends Command {
+  constructor (client: CommunityManager) {
     super({
       name: 'info',
       category: 'Informations',
@@ -10,7 +10,7 @@ export default class Info extends Command {
     }, client)
   }
 
-  async run () {
-    
+  async run ({ message }) {
+    message.channel.send('Hey, dude! I\'m CommunityManager, a bot that will be to manager your community with precision. Maybe I do not be so good, because I\'m in developing state')
   }
 }

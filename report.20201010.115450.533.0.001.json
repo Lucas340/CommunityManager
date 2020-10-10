@@ -1,0 +1,465 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20201010.115450.533.0.001.json",
+    "dumpEventTime": "2020-10-10T11:54:50Z",
+    "dumpEventTimeStamp": "1602341690161",
+    "processId": 533,
+    "threadId": null,
+    "cwd": "/mnt/c/Users/lucas/OneDrive/Área de Trabalho/Minhas Coisas/Applications/CommunityManager",
+    "commandLine": [
+      "/usr/local/bin/node",
+      "/mnt/c/Users/lucas/OneDrive/Área de Trabalho/Minhas Coisas/Applications/CommunityManager/node_modules/.bin/ts-node-dev",
+      "--ignore-watch",
+      "node_modules",
+      "src/index.ts"
+    ],
+    "nodejsVersion": "v12.16.3",
+    "glibcVersionRuntime": "2.31",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.16.3",
+      "v8": "7.8.279.23-node.35",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1g",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.4.0-18362-Microsoft",
+    "osVersion": "#1049-Microsoft Thu Aug 14 12:01:00 PST 2020",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2701,
+        "user": 5157900,
+        "nice": 0,
+        "sys": 7558400,
+        "idle": 23697600,
+        "irq": 597000
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2701,
+        "user": 5555700,
+        "nice": 0,
+        "sys": 5140600,
+        "idle": 25717600,
+        "irq": 143100
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2701,
+        "user": 5746800,
+        "nice": 0,
+        "sys": 6382100,
+        "idle": 24285000,
+        "irq": 74600
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2701,
+        "user": 5554800,
+        "nice": 0,
+        "sys": 6581700,
+        "idle": 24277500,
+        "irq": 75400
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "eth1",
+        "internal": false,
+        "mac": "02:50:06:94:8d:a1",
+        "address": "26.229.212.189",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "eth1",
+        "internal": false,
+        "mac": "02:50:06:94:8d:a1",
+        "address": "fdfd::1ae5:d4bd",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "eth1",
+        "internal": false,
+        "mac": "02:50:06:94:8d:a1",
+        "address": "fe80::4d2f:4418:930c:eea6",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 20
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wifi2",
+        "internal": false,
+        "mac": "10:5b:ad:e8:1f:b3",
+        "address": "192.168.15.10",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wifi2",
+        "internal": false,
+        "mac": "10:5b:ad:e8:1f:b3",
+        "address": "2804:5818:a00d:7100:dcba:bd00:a4d1:d66f",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wifi2",
+        "internal": false,
+        "mac": "10:5b:ad:e8:1f:b3",
+        "address": "2804:5818:a00d:7100:b936:a7a3:a1a4:d3d4",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wifi2",
+        "internal": false,
+        "mac": "10:5b:ad:e8:1f:b3",
+        "address": "fe80::dcba:bd00:a4d1:d66f",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 24
+      },
+      {
+        "name": "eth2",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "2001:0:2877:7aa:24d5:52ce:d256:9185",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "eth2",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::24d5:52ce:d256:9185",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 16
+      }
+    ],
+    "host": "DESKTOP-TJ7D1HG"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b46955",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000a09c8f",
+      "symbol": "node::OnFatalError(char const*, char const*) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b7d71e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b7da99",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d2a1f5",
+      "symbol": " [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d2a886",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d37105",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d37fb5",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d3aa6c",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d0163b",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x000000000104300e",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x00000000013c5b79",
+      "symbol": " [/usr/local/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2154827776,
+    "totalCommittedMemory": 2151144440,
+    "usedMemory": 2144539816,
+    "availableMemory": 49113984,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33088,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 1239632,
+        "capacity": 2094912,
+        "used": 220336,
+        "available": 1874576
+      },
+      "old_space": {
+        "memorySize": 2024153088,
+        "committedMemory": 2023842512,
+        "capacity": 2021705136,
+        "used": 2019548160,
+        "available": 2156976
+      },
+      "code_space": {
+        "memorySize": 2527232,
+        "committedMemory": 2341952,
+        "capacity": 2080480,
+        "used": 2080480,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1052672,
+        "committedMemory": 1048920,
+        "capacity": 610240,
+        "used": 610240,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 122589184,
+        "committedMemory": 122589184,
+        "capacity": 122045008,
+        "used": 122045008,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 2094912,
+        "used": 0,
+        "available": 2094912
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 214.828,
+    "kernelCpuSeconds": 33.6875,
+    "cpuConsumptionPercent": 13.5653,
+    "maxRss": 2221363200,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 753710
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 88.5312,
+    "kernelCpuSeconds": 25.3281,
+    "cpuConsumptionPercent": 6.21503,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "npm_package_devDependencies_ts_node": "^9.0.0",
+    "SPACESHIP_ROOT": "/home/lucas/.oh-my-zsh/custom/themes/spaceship-prompt",
+    "USER": "lucas",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_user_agent": "yarn/1.22.0 npm/? node/v12.16.3 linux x64",
+    "npm_package_dependencies_socket_io": "^2.3.0",
+    "npm_config_bin_links": "true",
+    "npm_node_execpath": "/usr/local/bin/node",
+    "npm_config_init_version": "1.0.0",
+    "SHLVL": "2",
+    "npm_package_devDependencies__types_express": "^4.17.8",
+    "HOME": "/home/lucas",
+    "OLDPWD": "/mnt/c/Users/lucas/OneDrive/Área de Trabalho/Minhas Coisas/Applications/CommunityManager",
+    "LESS": "-R",
+    "ZSH": "/home/lucas/.oh-my-zsh",
+    "LSCOLORS": "Gxfxcxdxbxegedabagacad",
+    "npm_config_init_license": "MIT",
+    "PAGER": "less",
+    "YARN_WRAP_OUTPUT": "false",
+    "npm_package_dependencies_glob": "^7.1.6",
+    "npm_config_version_tag_prefix": "v",
+    "npm_package_dependencies_moment": "^2.29.0",
+    "npm_package_dependencies_dotenv": "^8.2.0",
+    "WSL_DISTRO_NAME": "Ubuntu",
+    "npm_package_devDependencies_typescript": "^4.0.3",
+    "ZPFX": "/home/lucas/.zinit/polaris",
+    "LOGNAME": "lucas",
+    "NAME": "DESKTOP-TJ7D1HG",
+    "_": "/mnt/c/Program Files (x86)/Yarn/bin//yarn",
+    "npm_package_dependencies_express": "^4.17.1",
+    "npm_package_devDependencies__types_cors": "^2.8.7",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "TERM": "xterm-256color",
+    "npm_package_scripts_start": "ts-node-dev --ignore-watch node_modules src/index.ts",
+    "npm_config_ignore_scripts": "",
+    "ZSH_CACHE_DIR": "/home/lucas/.oh-my-zsh/cache",
+    "PMSPEC": "0uUpiPsf",
+    "PATH": "/tmp/yarn--1602339857866-0.7653823250017753:/mnt/c/Users/lucas/OneDrive/Área de Trabalho/Minhas Coisas/Applications/CommunityManager/node_modules/.bin:/home/lucas/.config/yarn/link/node_modules/.bin:/home/lucas/.yarn/bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/home/lucas/.zinit/polaris/sbin:/home/lucas/.zinit/polaris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/heroku/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ffmpeg-4.2.2-win64-static/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/nodejs/:/mnt/c/ffmpeg:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Windows/System32/WindowsPowerShell/v:/mnt/c/Users/lucas/AppData/Local/hyper/app-3.0.2/resources/bin:/mnt/c/Users/lucas/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/lucas/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/lucas/AppData/Local/GitHubDesktop/bin:/snap/bin",
+    "NODE": "/usr/local/bin/node",
+    "npm_package_name": "CommunityManager",
+    "LANG": "C.UTF-8",
+    "npm_package_devDependencies_ts_node_dev": "^1.0.0-pre.63",
+    "npm_package_dependencies_winston": "^3.3.3",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "npm_lifecycle_script": "ts-node-dev --ignore-watch node_modules src/index.ts",
+    "npm_package_dependencies_discord_js": "^12.3.1",
+    "npm_package_main": "index.js",
+    "npm_package_scripts_test": "echo \"Error: no test specified\" && exit 1",
+    "npm_config_version_git_message": "v%s",
+    "SHELL": "/bin/bash",
+    "npm_lifecycle_event": "start",
+    "npm_package_devDependencies__types_morgan": "^1.9.1",
+    "npm_package_version": "1.0.0",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
+    "npm_package_dependencies_cors": "^2.8.5",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_git_sign": "",
+    "npm_package_devDependencies__types_socket_io": "^2.1.11",
+    "npm_package_dependencies_mongoose": "^5.10.7",
+    "npm_package_license": "MIT",
+    "npm_config_strict_ssl": "true",
+    "SPACESHIP_VERSION": "3.11.2",
+    "PWD": "/mnt/c/Users/lucas/OneDrive/Área de Trabalho/Minhas Coisas/Applications/CommunityManager",
+    "npm_execpath": "/mnt/c/Program Files (x86)/Yarn/bin/yarn.js",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "npm_config_save_prefix": "^",
+    "npm_config_ignore_optional": "",
+    "HOSTTYPE": "x86_64",
+    "INIT_CWD": "/mnt/c/Users/lucas/OneDrive/Área de Trabalho/Minhas Coisas/Applications/CommunityManager",
+    "WSLENV": "",
+    "npm_package_dependencies_morgan": "^1.10.0"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": 8388608
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 7823,
+      "hard": 7823
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}

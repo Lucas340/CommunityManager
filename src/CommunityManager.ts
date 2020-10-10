@@ -54,7 +54,7 @@ class CommunityManager extends Client {
 
   loadEvents() {
     glob.sync('./src/events/*.ts').forEach(file => {
-      const event = new (require(`./events/${file}`))(this);
+      const event = new (require(`../${file}`))(this);
 
       super.on(file.split(".")[0], (...args) => event.run(...args));
     });
